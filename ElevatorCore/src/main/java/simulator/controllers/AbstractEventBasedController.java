@@ -103,7 +103,7 @@ public abstract class AbstractEventBasedController extends AbstractController {
      * To stop the elevator in a given/the next floor, call {@link #stopElevator(int)} or 
      * {@link #stopElevatorNextFloor(int)}.
      * 
-     * @param direction
+     * @param direction the desired moving direction (0 = none, 1 = up, -1 = down)
      */
     protected void moveElevator(int direction) {
         Elevator elevator = getElevator();
