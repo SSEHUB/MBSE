@@ -2,7 +2,49 @@
   <modelVersion>4.0.0</modelVersion>
   <groupId>net.ssehub.teaching</groupId>
   <artifactId>mbse.ElevatorCore</artifactId>
-  <version>0.5.4-SNAPSHOT</version>
+  <version>0.5.4</version>
+  <url>https://github.com/SSEHUB/MBSE.git</url>
+
+  <licenses>
+    <license>
+      <name>Apache License, Version 2.0</name>
+      <url>http://www.apache.org/licenses/LICENSE-2.0.txt</url>
+      <distribution>repo</distribution>
+    </license>
+  </licenses>
+  
+  <developers>
+    <developer>
+      <id>elscha</id>
+      <name>Sascha El-Sharkawy</name>
+      <email>elscha@sse.uni-hildesheim.de</email>
+      <url>https://sse.uni-hildesheim.de/mitglieder/sascha-el-sharkawy/</url>
+      <organization>SSE@SUH</organization>
+      <organizationUrl>https://sse.uni-hildesheim.de/</organizationUrl>
+      <roles>
+        <role>architect</role>
+        <role>developer</role>
+      </roles>
+      <timezone>Europe/Berlin</timezone>
+    </developer>
+    <developer>
+      <id>eichelbe</id>
+      <name>Holger Eichelberger</name>
+      <email>eichelberger@sse.uni-hildesheim.de</email>
+      <url>https://sse.uni-hildesheim.de/mitglieder/dr-holger-eichelberger/</url>
+      <organization>SSE@SUH</organization>
+      <organizationUrl>https://sse.uni-hildesheim.de/</organizationUrl>
+      <roles>
+        <role>architect</role>
+        <role>developer</role>
+      </roles>
+      <timezone>Europe/Berlin</timezone>
+    </developer>
+  </developers>  
+  
+  <scm>
+    <url>https://github.com/SSEHUB/MBSE.git</url>
+  </scm>  
 
   <properties>
     <project.build.sourceEncoding>Cp1252</project.build.sourceEncoding>
@@ -47,6 +89,19 @@
           </execution>
         </executions>
       </plugin>
+      
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-jar-plugin</artifactId>
+        <version>3.4.1</version>
+        <executions>
+          <execution>
+            <goals>
+              <goal>test-jar</goal>
+            </goals>
+          </execution>
+        </executions>
+      </plugin>      
       
       <plugin>
         <groupId>org.apache.maven.plugins</groupId>
