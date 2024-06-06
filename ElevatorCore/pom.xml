@@ -3,6 +3,8 @@
   <groupId>net.ssehub.teaching</groupId>
   <artifactId>mbse.ElevatorCore</artifactId>
   <version>0.5.4</version>
+  <name>Elevator Core</name>
+  <description>Configurable and extensivle elevator simulator in Java.</description>
   <url>https://github.com/SSEHUB/MBSE.git</url>
 
   <licenses>

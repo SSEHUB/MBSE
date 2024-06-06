@@ -2,7 +2,7 @@
 
 SET VERSION=0.5.4
 SET TARGET=https://oss.sonatype.org/service/local/staging/deploy/maven2
-SET REPO=ossrh-iip
+SET REPO=ossrh
 SET DEPLOYCMD=mvn gpg:sign-and-deploy-file -Durl=%TARGET% -DrepositoryId=%REPO%
 SET FOLDER=target
 SET PREFIX=mbse.ElevatorCore-%VERSION%
