@@ -19,6 +19,13 @@ public class SpeedController {
      */
     public SpeedController() {
     }
+    
+    /**
+     * Checks whether the button for a given floor is marked as ignored.
+     */
+    private boolean isIgnored(ArrayList<DefaultButton> buttons, int floorIndex) {
+        return floorIndex >= 0 && floorIndex < buttons.size() && buttons.get(floorIndex).isIgnored();
+    }
 
     /**
      * Adapts the speed for acceleration.
@@ -38,12 +45,10 @@ public class SpeedController {
         }
 
         int iSpeed = ProgramSettings.getInstance().getElevatorsSpeed();
-        boolean currentIgnored = buttons.get(elevator.getCurrentFloor()).isIgnored();
-        boolean nextIgnored = buttons.get(elevator.getCurrentFloor() + iPlus).isIgnored();
-        boolean prevIgnored = buttons.get(
-            Math.min(elevator.getCurrentFloor() - iPlus, ProgramSettings.getInstance().getElevators() - 1))
-            .isIgnored();
-
+        boolean currentIgnored = isIgnored(buttons, elevator.getCurrentFloor());
+        boolean nextIgnored = isIgnored(buttons, elevator.getCurrentFloor() + iPlus);
+        boolean prevIgnored = isIgnored(buttons, 
+        		Math.min(elevator.getCurrentFloor() - iPlus, ProgramSettings.getInstance().getElevators() - 1));
         int halfFloorHeight = ProgramSettings.getInstance().getFloorsHeight();
 
         if (currentIgnored) {
